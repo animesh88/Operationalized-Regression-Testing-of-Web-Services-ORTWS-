@@ -1,5 +1,5 @@
 # Web Service Slicing 
-<b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> \b
+<b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
 <b> Parameterized Regression Testing of Web Services (PRTWS) </b>
 
 Use NetBeans (enabled with Glassfish) to import and use the project.
