@@ -1,0 +1,2492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="EucalyptusCCSoapBinding TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AssignAddress TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="AssignAddress"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>AssignAddress</con:operation><con:request name="AssignAddress"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:AssignAddress>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <euc:uuid>?</euc:uuid>
+         <euc:source>?</euc:source>
+         <euc:dest>?</euc:dest>
+      </euc:AssignAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="EucalyptusCC#AssignAddress" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AttachVolume TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="AttachVolume" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>AttachVolume</con:operation><con:request name="AttachVolume"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:AttachVolume>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:volumeId>?</euc:volumeId>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+         <!--Optional:-->
+         <euc:remoteDev>?</euc:remoteDev>
+         <!--Optional:-->
+         <euc:localDev>?</euc:localDev>
+      </euc:AttachVolume>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#AttachVolume"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BundleInstance TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="BundleInstance" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleInstance</con:operation><con:request name="BundleInstance"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+         <!--Optional:-->
+         <euc:bucketName>?</euc:bucketName>
+         <!--Optional:-->
+         <euc:filePrefix>?</euc:filePrefix>
+         <!--Optional:-->
+         <euc:walrusURL>?</euc:walrusURL>
+         <!--Optional:-->
+         <euc:userPublicKey>?</euc:userPublicKey>
+         <!--Optional:-->
+         <euc:S3Policy>?</euc:S3Policy>
+         <!--Optional:-->
+         <euc:S3PolicySig>?</euc:S3PolicySig>
+      </euc:BundleInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#BundleInstance"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="BundleTest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="BundleTest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BundleRestartInstance TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="BundleRestartInstance"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="BundleRestartInstance"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="WSS Status Assertion" name="WS-Security Status"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="EucalyptusCC#BundleRestartInstance" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:securityTest name="SecurityTest 1" failOnError="true"><con:settings/><con:properties/></con:securityTest></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CancelBundleTask TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CancelBundleTask" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>CancelBundleTask</con:operation><con:request name="CancelBundleTask"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:CancelBundleTask>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:CancelBundleTask>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#CancelBundleTask"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CancelBundel"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="CancelBundel"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ConfigureNetwork TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ConfigureNetwork" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>ConfigureNetwork</con:operation><con:request name="ConfigureNetwork"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:ConfigureNetwork>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:rules>
+            <euc:type>?</euc:type>
+            <!--Zero or more repetitions:-->
+            <euc:sourceNames>?</euc:sourceNames>
+            <!--Zero or more repetitions:-->
+            <euc:userNames>?</euc:userNames>
+            <!--Zero or more repetitions:-->
+            <euc:sourceNets>?</euc:sourceNets>
+            <!--Optional:-->
+            <euc:destUserName>?</euc:destUserName>
+            <euc:destName>?</euc:destName>
+            <euc:protocol>?</euc:protocol>
+            <euc:portRangeMin>?</euc:portRangeMin>
+            <euc:portRangeMax>?</euc:portRangeMax>
+         </euc:rules>
+         <!--Optional:-->
+         <euc:accountId>?</euc:accountId>
+      </euc:ConfigureNetwork>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#ConfigureNetwork"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateImage TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateImage" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>CreateImage</con:operation><con:request name="CreateImage"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:CreateImage>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+         <!--Optional:-->
+         <euc:volumeId>?</euc:volumeId>
+         <!--Optional:-->
+         <euc:remoteDev>?</euc:remoteDev>
+      </euc:CreateImage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#CreateImage"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribeInstances TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribeInstances"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribeInstances</con:operation><con:request name="DescribeInstances"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribeInstances>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:instanceIds>?</euc:instanceIds>
+      </euc:DescribeInstances>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DescribeInstances"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribeNetworks TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribeNetworks"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribeNetworks</con:operation><con:request name="DescribeNetworks"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribeNetworks>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:nameserver>?</euc:nameserver>
+         <!--Zero or more repetitions:-->
+         <euc:clusterControllers>?</euc:clusterControllers>
+      </euc:DescribeNetworks>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DescribeNetworks"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>BundleRestartInstance</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:BundleRestartInstance>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:BundleRestartInstance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribePublicAddresses TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribePublicAddresses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribePublicAddresses</con:operation><con:request name="DescribePublicAddresses"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribePublicAddresses>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+      </euc:DescribePublicAddresses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DescribePublicAddresses"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribeResources TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribeResources" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribeResources</con:operation><con:request name="DescribeResources"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribeResources>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--1 or more repetitions:-->
+         <euc:instanceTypes>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Optional:-->
+            <euc:memory>?</euc:memory>
+            <!--Optional:-->
+            <euc:cores>?</euc:cores>
+            <!--Optional:-->
+            <euc:disk>?</euc:disk>
+            <!--Zero or more repetitions:-->
+            <euc:virtualBootRecord>
+               <!--Optional:-->
+               <euc:resourceLocation>?</euc:resourceLocation>
+               <!--Optional:-->
+               <euc:guestDeviceName>?</euc:guestDeviceName>
+               <!--Optional:-->
+               <euc:size>?</euc:size>
+               <!--Optional:-->
+               <euc:format>?</euc:format>
+               <!--Optional:-->
+               <euc:id>?</euc:id>
+               <!--Optional:-->
+               <euc:type>?</euc:type>
+            </euc:virtualBootRecord>
+         </euc:instanceTypes>
+      </euc:DescribeResources>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="EucalyptusCC#DescribeResources" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribeSensors TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribeSensors"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribeSensors</con:operation><con:request name="DescribeSensors"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribeSensors>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:historySize>?</euc:historySize>
+         <!--Optional:-->
+         <euc:collectionIntervalTimeMs>?</euc:collectionIntervalTimeMs>
+         <!--Zero or more repetitions:-->
+         <euc:instanceIds>?</euc:instanceIds>
+         <!--Zero or more repetitions:-->
+         <euc:sensorIds>?</euc:sensorIds>
+      </euc:DescribeSensors>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DescribeSensors"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DescribeServices TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DescribeServices" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DescribeServices</con:operation><con:request name="DescribeServices"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DescribeServices>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+      </euc:DescribeServices>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DescribeServices"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DetachVolume TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DetachVolume" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DetachVolume</con:operation><con:request name="DetachVolume"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DetachVolume>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+         <!--Optional:-->
+         <euc:volumeId>?</euc:volumeId>
+         <!--Optional:-->
+         <euc:remoteDev>?</euc:remoteDev>
+         <!--Optional:-->
+         <euc:localDev>?</euc:localDev>
+         <!--Optional:-->
+         <euc:force>?</euc:force>
+      </euc:DetachVolume>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DetachVolume"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DisableService TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DisableService" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>DisableService</con:operation><con:request name="DisableService"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:DisableService>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+         <!--Zero or more repetitions:-->
+         <euc:instancesIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:instancesIds>
+      </euc:DisableService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#DisableService"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="EnableService TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="EnableService" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>EnableService</con:operation><con:request name="EnableService"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:EnableService>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+         <!--Zero or more repetitions:-->
+         <euc:instancesIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:instancesIds>
+      </euc:EnableService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#EnableService"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetConsoleOutput TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetConsoleOutput" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>GetConsoleOutput</con:operation><con:request name="GetConsoleOutput"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:GetConsoleOutput>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:instanceId>?</euc:instanceId>
+      </euc:GetConsoleOutput>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#GetConsoleOutput"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RebootInstances TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="RebootInstances" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>RebootInstances</con:operation><con:request name="RebootInstances"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:RebootInstances>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:instanceIds>?</euc:instanceIds>
+      </euc:RebootInstances>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#RebootInstances"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RunInstances TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="RunInstances" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>RunInstances</con:operation><con:request name="RunInstances"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:RunInstances>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:imageId>?</euc:imageId>
+         <!--Optional:-->
+         <euc:kernelId>?</euc:kernelId>
+         <!--Optional:-->
+         <euc:ramdiskId>?</euc:ramdiskId>
+         <!--Optional:-->
+         <euc:imageURL>?</euc:imageURL>
+         <!--Optional:-->
+         <euc:kernelURL>?</euc:kernelURL>
+         <!--Optional:-->
+         <euc:ramdiskURL>?</euc:ramdiskURL>
+         <!--Optional:-->
+         <euc:instanceType>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Optional:-->
+            <euc:memory>?</euc:memory>
+            <!--Optional:-->
+            <euc:cores>?</euc:cores>
+            <!--Optional:-->
+            <euc:disk>?</euc:disk>
+            <!--Zero or more repetitions:-->
+            <euc:virtualBootRecord>
+               <!--Optional:-->
+               <euc:resourceLocation>?</euc:resourceLocation>
+               <!--Optional:-->
+               <euc:guestDeviceName>?</euc:guestDeviceName>
+               <!--Optional:-->
+               <euc:size>?</euc:size>
+               <!--Optional:-->
+               <euc:format>?</euc:format>
+               <!--Optional:-->
+               <euc:id>?</euc:id>
+               <!--Optional:-->
+               <euc:type>?</euc:type>
+            </euc:virtualBootRecord>
+         </euc:instanceType>
+         <!--Optional:-->
+         <euc:keyName>?</euc:keyName>
+         <euc:maxCount>?</euc:maxCount>
+         <euc:minCount>?</euc:minCount>
+         <euc:reservationId>?</euc:reservationId>
+         <!--1 or more repetitions:-->
+         <euc:instanceIds>?</euc:instanceIds>
+         <!--1 or more repetitions:-->
+         <euc:netNames>?</euc:netNames>
+         <!--1 or more repetitions:-->
+         <euc:macAddresses>?</euc:macAddresses>
+         <!--Zero or more repetitions:-->
+         <euc:networkIndexList>?</euc:networkIndexList>
+         <!--1 or more repetitions:-->
+         <euc:uuids>?</euc:uuids>
+         <euc:vlan>?</euc:vlan>
+         <euc:userData>?</euc:userData>
+         <euc:launchIndex>?</euc:launchIndex>
+         <!--Optional:-->
+         <euc:platform>?</euc:platform>
+         <!--Optional:-->
+         <euc:expiryTime>?</euc:expiryTime>
+         <!--Optional:-->
+         <euc:ownerId>?</euc:ownerId>
+         <!--Optional:-->
+         <euc:accountId>?</euc:accountId>
+      </euc:RunInstances>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#RunInstances"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ShutdownService TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ShutdownService" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>ShutdownService</con:operation><con:request name="ShutdownService"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:ShutdownService>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+         <!--Zero or more repetitions:-->
+         <euc:instancesIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:instancesIds>
+      </euc:ShutdownService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#ShutdownService"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="StartNetwork TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="StartNetwork" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>StartNetwork</con:operation><con:request name="StartNetwork"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:StartNetwork>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:uuid>?</euc:uuid>
+         <!--Optional:-->
+         <euc:vlan>?</euc:vlan>
+         <!--Optional:-->
+         <euc:netName>?</euc:netName>
+         <!--Optional:-->
+         <euc:nameserver>?</euc:nameserver>
+         <!--Zero or more repetitions:-->
+         <euc:clusterControllers>?</euc:clusterControllers>
+         <!--Optional:-->
+         <euc:accountId>?</euc:accountId>
+      </euc:StartNetwork>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#StartNetwork"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="StartService TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="StartService" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>StartService</con:operation><con:request name="StartService"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:StartService>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+         <!--Zero or more repetitions:-->
+         <euc:instancesIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:instancesIds>
+      </euc:StartService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#StartService"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="StopNetwork TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="StopNetwork" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>StopNetwork</con:operation><con:request name="StopNetwork"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:StopNetwork>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Optional:-->
+         <euc:vlan>?</euc:vlan>
+         <!--Optional:-->
+         <euc:netName>?</euc:netName>
+         <!--Optional:-->
+         <euc:accountId>?</euc:accountId>
+      </euc:StopNetwork>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#StopNetwork"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="StopService TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="StopService" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>StopService</con:operation><con:request name="StopService"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:StopService>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:serviceIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:serviceIds>
+         <!--Zero or more repetitions:-->
+         <euc:instancesIds>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:instancesIds>
+      </euc:StopService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#StopService"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TerminateInstances TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="TerminateInstances" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>TerminateInstances</con:operation><con:request name="TerminateInstances"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:TerminateInstances>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <!--Zero or more repetitions:-->
+         <euc:instanceIds>?</euc:instanceIds>
+         <!--Optional:-->
+         <euc:force>?</euc:force>
+      </euc:TerminateInstances>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#TerminateInstances"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UnassignAddress TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="UnassignAddress" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EucalyptusCCSoapBinding</con:interface><con:operation>UnassignAddress</con:operation><con:request name="UnassignAddress"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cc:9090/axis2/services/EucalyptusCC</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:euc="http://eucalyptus.ucsb.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <euc:UnassignAddress>
+         <!--Optional:-->
+         <euc:correlationId>?</euc:correlationId>
+         <!--Optional:-->
+         <euc:userId>?</euc:userId>
+         <!--Optional:-->
+         <euc:statusMessage>?</euc:statusMessage>
+         <!--Optional:-->
+         <euc:return>?</euc:return>
+         <!--Optional:-->
+         <euc:epoch>?</euc:epoch>
+         <!--Zero or more repetitions:-->
+         <euc:services>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:services>
+         <!--Zero or more repetitions:-->
+         <euc:disabledServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:disabledServices>
+         <!--Zero or more repetitions:-->
+         <euc:notreadyServices>
+            <!--Optional:-->
+            <euc:partition>?</euc:partition>
+            <!--Optional:-->
+            <euc:type>?</euc:type>
+            <!--Optional:-->
+            <euc:name>?</euc:name>
+            <!--Zero or more repetitions:-->
+            <euc:uris>?</euc:uris>
+         </euc:notreadyServices>
+         <!--Optional:-->
+         <euc:nodeName>?</euc:nodeName>
+         <euc:source>?</euc:source>
+         <euc:dest>?</euc:dest>
+      </euc:UnassignAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="EucalyptusCC#UnassignAddress"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>

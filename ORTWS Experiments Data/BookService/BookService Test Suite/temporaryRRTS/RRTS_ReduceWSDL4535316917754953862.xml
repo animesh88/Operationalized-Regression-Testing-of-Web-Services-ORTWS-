@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="BooKServicePortBinding TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAllVerseByBookAndChapterNumber TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAllVerseByBookAndChapterNumber"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BooKServicePortBinding</con:interface><con:operation>GetAllVerseByBookAndChapterNumber</con:operation><con:request name="GetAllVerseByBookAndChapterNumber"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:37490/BooKService/BooKServiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://BooKService/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <book:GetAllVerseByBookAndChapterNumber>
+         <bookNumber>?</bookNumber>
+         <chapterNumber>?</chapterNumber>
+      </book:GetAllVerseByBookAndChapterNumber>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://BooKService/BooKService/GetAllVerseByBookAndChapterNumberRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAbstractOfChapter TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetAbstractOfChapter"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BooKServicePortBinding</con:interface><con:operation>GetAbstractOfChapter</con:operation><con:request name="GetAbstractOfChapter"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:37490/BooKService/BooKServiceService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://BooKService/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <book:GetAbstractOfChapter>
+         <bookNumber>?</bookNumber>
+         <chapterNumber>?</chapterNumber>
+      </book:GetAbstractOfChapter>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://BooKService/BooKService/GetAbstractOfChapterRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/><con:reportParameters/></con:testSuite>
