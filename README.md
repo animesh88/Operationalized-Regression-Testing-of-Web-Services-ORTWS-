@@ -6,29 +6,32 @@ Use NetBeans and required libraries to import and use the project.
 
 Please cite or refer following research papers that used the JMeterRTWS in the experimentation section.
 
-For more detail follow https://sites.google.com/site/animeshchaturvedi07/research/awscm
-<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA
-<b> PRTWS </b> https://youtu.be/qkXe3YEi264
+For more detail follow https://sites.google.com/site/animeshchaturvedi07/research/awscm <br>
+<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
+<b> PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
 
 Basics of
-Cloud Service Life Cycle https://youtu.be/0BTYNOVJOBY
-Cloud Deployment Scenarios https://youtu.be/KqZ64ylCnVc
-Cloud Service Development Testing https://youtu.be/c_jBuw_4KMM
-Web Service Slicing https://youtu.be/1IFZSvvVwQw
-Service Evolution Analytics https://youtu.be/krpsiMKp40g
-QoS and SLA https://youtu.be/UfD2DLIeHxg
+Cloud Service Life Cycle https://youtu.be/0BTYNOVJOBY <br>
+Cloud Deployment Scenarios https://youtu.be/KqZ64ylCnVc <br>
+Cloud Service Development Testing https://youtu.be/c_jBuw_4KMM <br>
+Web Service Slicing https://youtu.be/1IFZSvvVwQw <br>
+Service Evolution Analytics https://youtu.be/krpsiMKp40g <br>
+QoS and SLA https://youtu.be/UfD2DLIeHxg <br>
+
+Subset WSDL https://www.youtube.com/watch?v=b38DVc7oMes
+AWSCM https://www.youtube.com/watch?v=Zg1f3x0OH5k
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
-J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641
-
+J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g
+ 
 # Web Service Slicing: Intra and Inter-Operational Analysis to Test Changes
-J1. Animesh Chaturvedi, and David Binkley. “Web Service Slicing: Intra and Inter-Operational Analysis to Test Changes”. IEEE Transactions on Services Computing (2018). IEEE Computer Society. DOI: 10.1109/TSC.2018.2821157
+J1. Animesh Chaturvedi, and David Binkley. “Web Service Slicing: Intra and Inter-Operational Analysis to Test Changes”. IEEE Transactions on Services Computing (2018). IEEE Computer Society. DOI: 10.1109/TSC.2018.2821157 https://youtu.be/1IFZSvvVwQw
 
 # Subset WSDL to access Subset Service for Analysis
-C4. Animesh Chaturvedi, “Subset WSDL to access Subset Service for Analysis”, 6th IEEE International Conference on Cloud Computing Technology and Science (IEEE CloudCom), Singapore, Dec 2014, pp 688-691. IEEE Computer Society and IEEE Cloud Computing DOI: 10.1109/CloudCom.2014.149.
+C4. Animesh Chaturvedi, “Subset WSDL to access Subset Service for Analysis”, 6th IEEE International Conference on Cloud Computing Technology and Science (IEEE CloudCom), Singapore, Dec 2014, pp 688-691. IEEE Computer Society and IEEE Cloud Computing DOI: 10.1109/CloudCom.2014.149. https://www.youtube.com/watch?v=b38DVc7oMes
 
 # Automated Web Service Change Management AWSCM - A Tool
-C3. Animesh Chaturvedi, “Automated Web Service Change Management AWSCM - A Tool” 6th IEEE International Conference on Cloud Computing Technology and Science (IEEE CloudCom), Singapore, Dec 2014, pp 715-718. IEEE Computer Society DOI: 10.1109/CloudCom.2014.144.
+C3. Animesh Chaturvedi, “Automated Web Service Change Management AWSCM - A Tool” 6th IEEE International Conference on Cloud Computing Technology and Science (IEEE CloudCom), Singapore, Dec 2014, pp 715-718. IEEE Computer Society DOI: 10.1109/CloudCom.2014.144. https://www.youtube.com/watch?v=Zg1f3x0OH5k
 
 # Regression Testing of Web Services using JMeter and SoapUI
 C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Efficient Regression Testing of Web Services”, 7th IEEE International Symposium on Maintenance and Evolution of Service oriented and Cloud Based Systems (IEEE MESOCA) Sept 2013, pp 50-55. IEEE Computer Society (co-located with 29th IEEE ICSM), Eindhoven, Netherlands 2013. DOI: 10.1109/MESOCA.2013.6632734.
