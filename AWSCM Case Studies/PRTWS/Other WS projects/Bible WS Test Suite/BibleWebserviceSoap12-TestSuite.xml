@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="BibleWebserviceSoap12 TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBibleWordsByBookTitleAndChapter TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetBibleWordsByBookTitleAndChapter"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BibleWebserviceSoap12</con:interface><con:operation>GetBibleWordsByBookTitleAndChapter</con:operation><con:request name="GetBibleWordsByBookTitleAndChapter"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/BibleWebservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetBibleWordsByBookTitleAndChapter>
+         <!--Optional:-->
+         <web:BookTitle>?</web:BookTitle>
+         <web:chapter>?</web:chapter>
+      </web:GetBibleWordsByBookTitleAndChapter>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig action="http://www.webserviceX.NET/BibleWebserviceSoap/GetBibleWordsByBookTitleAndChapterRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBibleWordsByChapterAndVerse TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetBibleWordsByChapterAndVerse"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BibleWebserviceSoap12</con:interface><con:operation>GetBibleWordsByChapterAndVerse</con:operation><con:request name="GetBibleWordsByChapterAndVerse"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/BibleWebservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetBibleWordsByChapterAndVerse>
+         <!--Optional:-->
+         <web:BookTitle></web:BookTitle>
+         <web:chapter>?</web:chapter>
+         <web:Verse>?</web:Verse>
+      </web:GetBibleWordsByChapterAndVerse>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.webserviceX.NET/BibleWebserviceSoap/GetBibleWordsByChapterAndVerseRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Chapter"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BibleWebserviceSoap</con:interface><con:operation>GetBibleWordsByChapterAndVerse</con:operation><con:request name="Chapter"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/BibleWebservice.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetBibleWordsByChapterAndVerse>
+         <!--Optional:-->
+         <web:BookTitle>?</web:BookTitle>
+         <web:chapter>?</web:chapter>
+         <web:Verse>?</web:Verse>
+      </web:GetBibleWordsByChapterAndVerse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:assertion type="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBibleWordsbyKeyWord TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetBibleWordsbyKeyWord"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BibleWebserviceSoap12</con:interface><con:operation>GetBibleWordsbyKeyWord</con:operation><con:request name="GetBibleWordsbyKeyWord"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/BibleWebservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetBibleWordsbyKeyWord>
+         <!--Optional:-->
+         <web:BibleWords>?</web:BibleWords>
+      </web:GetBibleWordsbyKeyWord>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig action="http://www.webserviceX.NET/BibleWebserviceSoap/GetBibleWordsbyKeyWordRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBookTitles TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetBookTitles"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BibleWebserviceSoap12</con:interface><con:operation>GetBookTitles</con:operation><con:request name="GetBookTitles"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/BibleWebservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetBookTitles/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig action="http://www.webserviceX.NET/BibleWebserviceSoap/GetBookTitlesRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
