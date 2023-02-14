@@ -1,0 +1,220 @@
+<UML:CompositeState.subvertex>
+                <UML:Pseudostate xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000868'
+                  isSpecification = 'false' kind = 'initial'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086A'/>
+                  </UML:StateVertex.outgoing>
+				  <Executive type="CEO">
+        <LastName type="name2">John</LastName>
+		<FirstName>Jim</FirstName>
+        <street>123 Main Street</street>
+        <city>Mytown</city>
+        <state>NY</state>
+        <zip>11234</zip>
+    </Executive>
+                </UML:Pseudostate>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000869'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086F'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086A'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086B'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086D'
+                          language = '' body = 'recieve order'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:Pseudostate xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086E'
+                  isSpecification = 'false' kind = 'fork'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000871'/>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000890'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000086F'/>
+                  </UML:StateVertex.incoming>
+				  <Executive type="CEO">
+        <LastName type="name2">Animesh</LastName>
+		<FirstName>Jim</FirstName>
+        <street>123 Main Street</street>
+        <city>Mytown</city>
+        <state>NY</state>
+        <zip>11234</zip>
+    </Executive>
+                </UML:Pseudostate>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000870'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000087B'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000871'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000872'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000873'
+                          language = '' body = 'fill order'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:Pseudostate xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000087A'
+                  isSpecification = 'false' kind = 'junction'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000880'/>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000889'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000087B'/>
+                  </UML:StateVertex.incoming>
+				  <Executive type="CEO">
+        <LastName type="name2">Pinto</LastName>
+		<FirstName>Jim</FirstName>
+        <street>123 Main Street</street>
+        <city>Mytown</city>
+        <state>NY</state>
+        <zip>11234</zip>
+    </Executive>
+                </UML:Pseudostate>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000087C'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088E'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000880'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000087D'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000881'
+                          language = '' body = 'regular delivery'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000884'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088D'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000889'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088A'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088B'
+                          language = '' body = 'overnight delivery'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:Pseudostate xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088C'
+                  isSpecification = 'false' kind = 'junction'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000898'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088D'/>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088E'/>
+                  </UML:StateVertex.incoming>
+				  <Executive type="CEO">
+        <LastName type="name2">John</LastName>
+		<FirstName>Jim</FirstName>
+        <street>123 Main Street</street>
+        <city>Mytown</city>
+        <state>NY</state>
+        <zip>11234</zip>
+    </Executive>
+                </UML:Pseudostate>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000088F'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000894'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000890'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000891'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000892'
+                          language = '' body = 'send invoice'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000893'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000899'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000894'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000895'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000896'
+                          language = '' body = 'receive paymet'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:Pseudostate xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000897'
+                  isSpecification = 'false' kind = 'join'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089B'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000898'/>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:0000000000000899'/>
+                  </UML:StateVertex.incoming>
+				  <Executive type="CEO">
+        <LastName type="name2">John</LastName>
+		<FirstName>Jim</FirstName>
+        <street>123 Main Street</street>
+        <city>Mytown</city>
+        <state>NY</state>
+        <zip>11234</zip>
+    </Executive>
+                </UML:Pseudostate>
+                <UML:ActionState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089A'
+                  isSpecification = 'false' isDynamic = 'false'>
+                  <UML:StateVertex.outgoing>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089F'/>
+                  </UML:StateVertex.outgoing>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089B'/>
+                  </UML:StateVertex.incoming>
+                  <UML:State.entry>
+                    <UML:UninterpretedAction xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089C'
+                      isSpecification = 'false' isAsynchronous = 'false'>
+                      <UML:Action.script>
+                        <UML:ActionExpression xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089D'
+                          language = '' body = 'close order'/>
+                      </UML:Action.script>
+                    </UML:UninterpretedAction>
+                  </UML:State.entry>
+                </UML:ActionState>
+                <UML:FinalState xmi.id = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089E'
+                  isSpecification = 'false'>
+                  <UML:StateVertex.incoming>
+                    <UML:Transition xmi.idref = '-84-27-22--113--61c0e724:13c7f9c1dbf:-8000:000000000000089F'/>
+                  </UML:StateVertex.incoming>
+                </UML:FinalState>
+              </UML:CompositeState.subvertex>

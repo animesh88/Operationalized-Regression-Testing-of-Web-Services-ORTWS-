@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="AmazonWebServices.wsdl" resourceRoot="" soapui-version="4.0.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="AmazonSearchBinding" type="wsdl" bindingName="{http://soap.amazon.com}AmazonSearchBinding" soapVersion="1_1" anonymous="optional" definition="file:///D:/others/RTST/AmazonWebServices.wsdl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\\\D:\others\RTST\AmazonWebServices.wsdl.xml"><con:part><con:url>file:\\\D:\others\RTST\AmazonWebServices.wsdl.xml</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://soap.amazon.com" name="AmazonSearch" xmlns:typens="http://soap.amazon.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://soap.amazon.com" xmlns="">
+      <xsd:complexType name="ProductLineArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:ProductLine[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductLine">
+        <xsd:all>
+          <xsd:element name="Mode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ProductInfo" type="typens:ProductInfo" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ProductInfo">
+        <xsd:all>
+          <xsd:element name="TotalResults" type="xsd:string" minOccurs="0"/>
+          <!--Total number of Search Results-->
+          <xsd:element name="TotalPages" type="xsd:string" minOccurs="0"/>
+          <!--Total number of Pages of Search Results-->
+          <xsd:element name="ListName" type="xsd:string" minOccurs="0"/>
+          <!--Listmania list name-->
+          <xsd:element name="Details" type="typens:DetailsArray" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <!--Product Details 
+				L - indicates that a piece of data is returned in a "lite" request
+				O - indicates that a piece of data will be returned only if it exists for the specific item-->
+      <xsd:complexType name="DetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:Details[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Details">
+        <xsd:all>
+          <xsd:element name="Url" type="xsd:string" minOccurs="0"/>
+          <!--L-->
+          <xsd:element name="Asin" type="xsd:string" minOccurs="0"/>
+          <!--L-->
+          <xsd:element name="ProductName" type="xsd:string" minOccurs="0"/>
+          <!--L-->
+          <xsd:element name="Catalog" type="xsd:string" minOccurs="0"/>
+          <!--L-->
+          <xsd:element name="KeyPhrases" type="typens:KeyPhraseArray" minOccurs="0"/>
+          <xsd:element name="Artists" type="typens:ArtistArray" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="Authors" type="typens:AuthorArray" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="Mpn" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Starring" type="typens:StarringArray" minOccurs="0"/>
+          <xsd:element name="Directors" type="typens:DirectorArray" minOccurs="0"/>
+          <xsd:element name="TheatricalReleaseDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ReleaseDate" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="Manufacturer" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="Distributor" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ImageUrlSmall" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="ImageUrlMedium" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="ImageUrlLarge" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="ListPrice" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="OurPrice" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="UsedPrice" type="xsd:string" minOccurs="0"/>
+          <!--LO-->
+          <xsd:element name="RefurbishedPrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="CollectiblePrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ThirdPartyNewPrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfOfferings" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ThirdPartyNewCount" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="UsedCount" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="CollectibleCount" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="RefurbishedCount" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ThirdPartyProductInfo" type="typens:ThirdPartyProductInfo" minOccurs="0"/>
+          <xsd:element name="SalesRank" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="BrowseList" type="typens:BrowseNodeArray" minOccurs="0"/>
+          <xsd:element name="Media" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ReadingLevel" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfPages" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfIssues" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="IssuesPerYear" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SubscriptionLength" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="DeweyNumber" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="RunningTime" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Publisher" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumMedia" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Isbn" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Features" type="typens:FeaturesArray" minOccurs="0"/>
+          <xsd:element name="MpaaRating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EsrbRating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="AgeGroup" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Availability" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Upc" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Tracks" type="typens:TrackArray" minOccurs="0"/>
+          <xsd:element name="Accessories" type="typens:AccessoryArray" minOccurs="0"/>
+          <xsd:element name="Platforms" type="typens:PlatformArray" minOccurs="0"/>
+          <xsd:element name="Encoding" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Reviews" type="typens:Reviews" minOccurs="0"/>
+          <xsd:element name="SimilarProducts" type="typens:SimilarProductsArray" minOccurs="0"/>
+          <xsd:element name="Lists" type="typens:ListArray" minOccurs="0"/>
+          <xsd:element name="Status" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="KeyPhraseArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:KeyPhrase[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="KeyPhrase">
+        <xsd:all>
+          <xsd:element name="KeyPhrase" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Type" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArtistArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AuthorArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StarringArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="DirectorArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="BrowseNodeArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:BrowseNode[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="BrowseNode">
+        <xsd:all>
+          <xsd:element name="BrowseId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="BrowseName" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="FeaturesArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TrackArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:Track[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Track">
+        <xsd:all>
+          <xsd:element name="TrackName" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ByArtist" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AccessoryArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PlatformArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Reviews">
+        <xsd:all>
+          <xsd:element name="AvgCustomerRating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="TotalCustomerReviews" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="CustomerReviews" type="typens:CustomerReviewArray" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerReviewArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:CustomerReview[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CustomerReview">
+        <xsd:all>
+          <xsd:element name="Rating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Summary" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Comment" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SimilarProductsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ListArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="MarketplaceSearch">
+        <xsd:all>
+          <xsd:element name="MarketplaceSearchDetails" type="typens:MarketplaceSearchDetailsArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerProfile">
+        <xsd:all>
+          <xsd:element name="SellerProfileDetails" type="typens:SellerProfileDetailsArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerSearch">
+        <xsd:all>
+          <xsd:element name="SellerSearchDetails" type="typens:SellerSearchDetailsArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <!--<xsd:complexType name="ExchangeSearch">
+				<xsd:all>
+					<xsd:element name="ListingProductDetails" type="typens:ListingProductDetailsArray"/>
+				</xsd:all>
+			</xsd:complexType>-->
+      <xsd:complexType name="MarketplaceSearchDetails">
+        <xsd:all>
+          <xsd:element name="NumberOfOpenListings" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ListingProductInfo" type="typens:ListingProductInfo" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="MarketplaceSearchDetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:MarketplaceSearchDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SellerProfileDetails">
+        <xsd:all>
+          <xsd:element name="SellerNickname" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="OverallFeedbackRating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfFeedback" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfCanceledBids" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfCanceledAuctions" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StoreId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StoreName" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerFeedback" type="typens:SellerFeedback" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerProfileDetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:SellerProfileDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SellerSearchDetails">
+        <xsd:all>
+          <xsd:element name="SellerNickname" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StoreId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="StoreName" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="NumberOfOpenListings" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ListingProductInfo" type="typens:ListingProductInfo" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerSearchDetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:SellerSearchDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ListingProductInfo">
+        <xsd:all>
+          <xsd:element name="ListingProductDetails" type="typens:ListingProductDetailsArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ListingProductDetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:ListingProductDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ListingProductDetails">
+        <xsd:all>
+          <xsd:element name="ExchangeId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ListingId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeTitle" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangePrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeAsin" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeEndDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeTinyImage" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeSellerId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeSellerNickname" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeStartDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeStatus" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeQuantity" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeQuantityAllocated" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeFeaturedCategory" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeCondition" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeConditionType" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeAvailability" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeOfferingType" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeSellerState" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeSellerCountry" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeSellerRating" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerFeedback">
+        <xsd:all>
+          <xsd:element name="Feedback" type="typens:FeedbackArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="FeedbackArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:Feedback[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Feedback">
+        <xsd:all>
+          <xsd:element name="FeedbackRating" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="FeedbackComments" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="FeedbackDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="FeedbackRater" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ThirdPartyProductInfo">
+        <xsd:all>
+          <xsd:element name="ThirdPartyProductDetails" type="typens:ThirdPartyProductDetailsArray"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ThirdPartyProductDetailsArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:ThirdPartyProductDetails[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ThirdPartyProductDetails">
+        <xsd:all>
+          <xsd:element name="OfferingType" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerNickname" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="OfferingPrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Condition" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ConditionType" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeAvailability" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerCountry" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerState" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ShipComments" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="SellerRating" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="KeywordRequest">
+        <xsd:all>
+          <xsd:element name="keyword" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PowerRequest">
+        <xsd:all>
+          <xsd:element name="power" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="BrowseNodeRequest">
+        <xsd:all>
+          <xsd:element name="browse_node" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AsinRequest">
+        <xsd:all>
+          <xsd:element name="asin" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="offer" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="offerpage" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="BlendedRequest">
+        <xsd:all>
+          <xsd:element name="blended" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="UpcRequest">
+        <xsd:all>
+          <xsd:element name="upc" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArtistRequest">
+        <xsd:all>
+          <xsd:element name="artist" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AuthorRequest">
+        <xsd:all>
+          <xsd:element name="author" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ActorRequest">
+        <xsd:all>
+          <xsd:element name="actor" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="DirectorRequest">
+        <xsd:all>
+          <xsd:element name="director" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeRequest">
+        <xsd:all>
+          <xsd:element name="exchange_id" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ManufacturerRequest">
+        <xsd:all>
+          <xsd:element name="manufacturer" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="mode" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="variations" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ListManiaRequest">
+        <xsd:all>
+          <xsd:element name="lm_id" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="WishlistRequest">
+        <xsd:all>
+          <xsd:element name="wishlist_id" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="MarketplaceRequest">
+        <xsd:all>
+          <xsd:element name="marketplace_search" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="keyword" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="keyword_search" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="browse_id" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="zipcode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="area_id" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="geo" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="sort" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="listing_id" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="index" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerProfileRequest">
+        <xsd:all>
+          <xsd:element name="seller_id" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SellerRequest">
+        <xsd:all>
+          <xsd:element name="seller_id" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="offerstatus" type="xsd:string"/>
+          <xsd:element name="page" type="xsd:string"/>
+          <xsd:element name="seller_browse_id" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="keyword" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="index" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="SimilarityRequest">
+        <xsd:all>
+          <xsd:element name="asin" type="xsd:string"/>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="type" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <!--Shopping Cart-->
+      <xsd:complexType name="ItemIdArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ItemArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:Item[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Item">
+        <xsd:all>
+          <xsd:element name="ItemId" type="xsd:string"/>
+          <xsd:element name="ProductName" type="xsd:string"/>
+          <xsd:element name="Catalog" type="xsd:string"/>
+          <xsd:element name="Asin" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Quantity" type="xsd:string"/>
+          <xsd:element name="ListPrice" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="OurPrice" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ItemQuantityArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:ItemQuantity[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ItemQuantity">
+        <xsd:all>
+          <xsd:element name="ItemId" type="xsd:string"/>
+          <xsd:element name="Quantity" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AddItemArray">
+        <xsd:complexContent>
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute ref="soapenc:arrayType" wsdl:arrayType="typens:AddItem[]"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AddItem">
+        <xsd:all>
+          <xsd:element name="Asin" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ExchangeId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Quantity" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ShoppingCart">
+        <xsd:all>
+          <xsd:element name="CartId" type="xsd:string"/>
+          <xsd:element name="HMAC" type="xsd:string"/>
+          <xsd:element name="PurchaseUrl" type="xsd:string"/>
+          <xsd:element name="Items" type="typens:ItemArray" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetShoppingCartRequest">
+        <xsd:all>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="CartId" type="xsd:string"/>
+          <xsd:element name="HMAC" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ClearShoppingCartRequest">
+        <xsd:all>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="CartId" type="xsd:string"/>
+          <xsd:element name="HMAC" type="xsd:string"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="AddShoppingCartItemsRequest">
+        <xsd:all>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="CartId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="HMAC" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Items" type="typens:AddItemArray"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RemoveShoppingCartItemsRequest">
+        <xsd:all>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="CartId" type="xsd:string"/>
+          <xsd:element name="HMAC" type="xsd:string"/>
+          <xsd:element name="Items" type="typens:ItemIdArray"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ModifyShoppingCartItemsRequest">
+        <xsd:all>
+          <xsd:element name="tag" type="xsd:string"/>
+          <xsd:element name="devtag" type="xsd:string"/>
+          <xsd:element name="CartId" type="xsd:string"/>
+          <xsd:element name="HMAC" type="xsd:string"/>
+          <xsd:element name="Items" type="typens:ItemQuantityArray"/>
+          <xsd:element name="locale" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <message name="KeywordSearchRequest">
+    <!--Messages for Amazon Web APIs-->
+    <part name="KeywordSearchRequest" type="typens:KeywordRequest"/>
+  </message>
+  <message name="KeywordSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="PowerSearchRequest">
+    <part name="PowerSearchRequest" type="typens:PowerRequest"/>
+  </message>
+  <message name="PowerSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="BrowseNodeSearchRequest">
+    <part name="BrowseNodeSearchRequest" type="typens:BrowseNodeRequest"/>
+  </message>
+  <message name="BrowseNodeSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="AsinSearchRequest">
+    <part name="AsinSearchRequest" type="typens:AsinRequest"/>
+  </message>
+  <message name="AsinSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="BlendedSearchRequest">
+    <part name="BlendedSearchRequest" type="typens:BlendedRequest"/>
+  </message>
+  <message name="BlendedSearchResponse">
+    <part name="return" type="typens:ProductLineArray"/>
+  </message>
+  <message name="UpcSearchRequest">
+    <part name="UpcSearchRequest" type="typens:UpcRequest"/>
+  </message>
+  <message name="UpcSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="AuthorSearchRequest">
+    <part name="AuthorSearchRequest" type="typens:AuthorRequest"/>
+  </message>
+  <message name="AuthorSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="ArtistSearchRequest">
+    <part name="ArtistSearchRequest" type="typens:ArtistRequest"/>
+  </message>
+  <message name="ArtistSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="ActorSearchRequest">
+    <part name="ActorSearchRequest" type="typens:ActorRequest"/>
+  </message>
+  <message name="ActorSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="DirectorSearchRequest">
+    <part name="DirectorSearchRequest" type="typens:DirectorRequest"/>
+  </message>
+  <message name="DirectorSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="ExchangeSearchRequest">
+    <part name="ExchangeSearchRequest" type="typens:ExchangeRequest"/>
+  </message>
+  <message name="ExchangeSearchResponse">
+    <part name="return" type="typens:ListingProductDetails"/>
+  </message>
+  <message name="ManufacturerSearchRequest">
+    <part name="ManufacturerSearchRequest" type="typens:ManufacturerRequest"/>
+  </message>
+  <message name="ManufacturerSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="MarketplaceSearchRequest">
+    <part name="MarketplaceSearchRequest" type="typens:MarketplaceRequest"/>
+  </message>
+  <message name="MarketplaceSearchResponse">
+    <part name="return" type="typens:MarketplaceSearch"/>
+  </message>
+  <message name="ListManiaSearchRequest">
+    <part name="ListManiaSearchRequest" type="typens:ListManiaRequest"/>
+  </message>
+  <message name="ListManiaSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="WishlistSearchRequest">
+    <part name="WishlistSearchRequest" type="typens:WishlistRequest"/>
+  </message>
+  <message name="WishlistSearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="SellerProfileSearchRequest">
+    <part name="SellerProfileSearchRequest" type="typens:SellerProfileRequest"/>
+  </message>
+  <message name="SellerProfileSearchResponse">
+    <part name="return" type="typens:SellerProfile"/>
+  </message>
+  <message name="SellerSearchRequest">
+    <part name="SellerSearchRequest" type="typens:SellerRequest"/>
+  </message>
+  <message name="SellerSearchResponse">
+    <part name="return" type="typens:SellerSearch"/>
+  </message>
+  <message name="SimilaritySearchRequest">
+    <part name="SimilaritySearchRequest" type="typens:SimilarityRequest"/>
+  </message>
+  <message name="SimilaritySearchResponse">
+    <part name="return" type="typens:ProductInfo"/>
+  </message>
+  <message name="GetShoppingCartRequest">
+    <part name="GetShoppingCartRequest" type="typens:GetShoppingCartRequest"/>
+  </message>
+  <message name="ClearShoppingCartRequest">
+    <part name="ClearShoppingCartRequest" type="typens:ClearShoppingCartRequest"/>
+  </message>
+  <message name="AddShoppingCartItemsRequest">
+    <part name="AddShoppingCartItemsRequest" type="typens:AddShoppingCartItemsRequest"/>
+  </message>
+  <message name="RemoveShoppingCartItemsRequest">
+    <part name="RemoveShoppingCartItemsRequest" type="typens:RemoveShoppingCartItemsRequest"/>
+  </message>
+  <message name="ModifyShoppingCartItemsRequest">
+    <part name="ModifyShoppingCartItemsRequest" type="typens:ModifyShoppingCartItemsRequest"/>
+  </message>
+  <message name="ShoppingCartResponse">
+    <part name="ShoppingCart" type="typens:ShoppingCart"/>
+  </message>
+  <portType name="AmazonSearchPort">
+    <!--Port for Amazon Web APIs-->
+    <operation name="KeywordSearchRequest">
+      <input message="typens:KeywordSearchRequest"/>
+      <output message="typens:KeywordSearchResponse"/>
+    </operation>
+    <operation name="PowerSearchRequest">
+      <input message="typens:PowerSearchRequest"/>
+      <output message="typens:PowerSearchResponse"/>
+    </operation>
+    <operation name="BrowseNodeSearchRequest">
+      <input message="typens:BrowseNodeSearchRequest"/>
+      <output message="typens:BrowseNodeSearchResponse"/>
+    </operation>
+    <operation name="AsinSearchRequest">
+      <input message="typens:AsinSearchRequest"/>
+      <output message="typens:AsinSearchResponse"/>
+    </operation>
+    <operation name="BlendedSearchRequest">
+      <input message="typens:BlendedSearchRequest"/>
+      <output message="typens:BlendedSearchResponse"/>
+    </operation>
+    <operation name="UpcSearchRequest">
+      <input message="typens:UpcSearchRequest"/>
+      <output message="typens:UpcSearchResponse"/>
+    </operation>
+    <operation name="AuthorSearchRequest">
+      <input message="typens:AuthorSearchRequest"/>
+      <output message="typens:AuthorSearchResponse"/>
+    </operation>
+    <operation name="ArtistSearchRequest">
+      <input message="typens:ArtistSearchRequest"/>
+      <output message="typens:ArtistSearchResponse"/>
+    </operation>
+    <operation name="ActorSearchRequest">
+      <input message="typens:ActorSearchRequest"/>
+      <output message="typens:ActorSearchResponse"/>
+    </operation>
+    <operation name="ManufacturerSearchRequest">
+      <input message="typens:ManufacturerSearchRequest"/>
+      <output message="typens:ManufacturerSearchResponse"/>
+    </operation>
+    <operation name="DirectorSearchRequest">
+      <input message="typens:DirectorSearchRequest"/>
+      <output message="typens:DirectorSearchResponse"/>
+    </operation>
+    <operation name="ListManiaSearchRequest">
+      <input message="typens:ListManiaSearchRequest"/>
+      <output message="typens:ListManiaSearchResponse"/>
+    </operation>
+    <operation name="WishlistSearchRequest">
+      <input message="typens:WishlistSearchRequest"/>
+      <output message="typens:WishlistSearchResponse"/>
+    </operation>
+    <operation name="ExchangeSearchRequest">
+      <input message="typens:ExchangeSearchRequest"/>
+      <output message="typens:ExchangeSearchResponse"/>
+    </operation>
+    <operation name="MarketplaceSearchRequest">
+      <input message="typens:MarketplaceSearchRequest"/>
+      <output message="typens:MarketplaceSearchResponse"/>
+    </operation>
+    <operation name="SellerProfileSearchRequest">
+      <input message="typens:SellerProfileSearchRequest"/>
+      <output message="typens:SellerProfileSearchResponse"/>
+    </operation>
+    <operation name="SellerSearchRequest">
+      <input message="typens:SellerSearchRequest"/>
+      <output message="typens:SellerSearchResponse"/>
+    </operation>
+    <operation name="SimilaritySearchRequest">
+      <input message="typens:SimilaritySearchRequest"/>
+      <output message="typens:SimilaritySearchResponse"/>
+    </operation>
+    <!--Shopping Cart-->
+    <operation name="GetShoppingCartRequest">
+      <input message="typens:GetShoppingCartRequest"/>
+      <output message="typens:ShoppingCartResponse"/>
+    </operation>
+    <operation name="ClearShoppingCartRequest">
+      <input message="typens:ClearShoppingCartRequest"/>
+      <output message="typens:ShoppingCartResponse"/>
+    </operation>
+    <operation name="AddShoppingCartItemsRequest">
+      <input message="typens:AddShoppingCartItemsRequest"/>
+      <output message="typens:ShoppingCartResponse"/>
+    </operation>
+    <operation name="RemoveShoppingCartItemsRequest">
+      <input message="typens:RemoveShoppingCartItemsRequest"/>
+      <output message="typens:ShoppingCartResponse"/>
+    </operation>
+    <operation name="ModifyShoppingCartItemsRequest">
+      <input message="typens:ModifyShoppingCartItemsRequest"/>
+      <output message="typens:ShoppingCartResponse"/>
+    </operation>
+  </portType>
+  <binding name="AmazonSearchBinding" type="typens:AmazonSearchPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <!--Binding for Amazon Web APIs - RPC, SOAP over HTTP-->
+    <operation name="KeywordSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="PowerSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="BrowseNodeSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="AsinSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="BlendedSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="UpcSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="AuthorSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ArtistSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ActorSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ManufacturerSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="DirectorSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ExchangeSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ListManiaSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="WishlistSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="SellerProfileSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="SellerSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="MarketplaceSearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="SimilaritySearchRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <!--Shopping Cart-->
+    <operation name="GetShoppingCartRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ClearShoppingCartRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="AddShoppingCartItemsRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="RemoveShoppingCartItemsRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+    <operation name="ModifyShoppingCartItemsRequest">
+      <soap:operation soapAction="http://soap.amazon.com"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://soap.amazon.com"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="AmazonSearchService">
+    <!--Endpoint for Amazon Web APIs-->
+    <port name="AmazonSearchPort" binding="typens:AmazonSearchBinding">
+      <soap:address location="http://soap.amazon.com/onca/soap2"/>
+    </port>
+  </service>
+  <!--Shopping Cart-->
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://soap.amazon.com" name="ActorSearchRequest" bindingOperationName="ActorSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ActorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ActorSearchRequest xsi:type="soap:ActorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <actor xsi:type="xsd:string">?</actor>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ActorSearchRequest>
+      </soap:ActorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="AddShoppingCartItemsRequest" bindingOperationName="AddShoppingCartItemsRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AddShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AddShoppingCartItemsRequest xsi:type="soap:AddShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <CartId xsi:type="xsd:string">?</CartId>
+            <!--Optional:-->
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:AddItemArray" soapenc:arrayType="soap:AddItem[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AddShoppingCartItemsRequest>
+      </soap:AddShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ArtistSearchRequest" bindingOperationName="ArtistSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ArtistSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ArtistSearchRequest xsi:type="soap:ArtistRequest">
+            <!--You may enter the following 9 items in any order-->
+            <artist xsi:type="xsd:string">?</artist>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ArtistSearchRequest>
+      </soap:ArtistSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="AsinSearchRequest" bindingOperationName="AsinSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AsinSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AsinSearchRequest xsi:type="soap:AsinRequest">
+            <!--You may enter the following 7 items in any order-->
+            <asin xsi:type="xsd:string">?</asin>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <offer xsi:type="xsd:string">?</offer>
+            <!--Optional:-->
+            <offerpage xsi:type="xsd:string">?</offerpage>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AsinSearchRequest>
+      </soap:AsinSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="AuthorSearchRequest" bindingOperationName="AuthorSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AuthorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AuthorSearchRequest xsi:type="soap:AuthorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <author xsi:type="xsd:string">?</author>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AuthorSearchRequest>
+      </soap:AuthorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="BlendedSearchRequest" bindingOperationName="BlendedSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:BlendedSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <BlendedSearchRequest xsi:type="soap:BlendedRequest">
+            <!--You may enter the following 5 items in any order-->
+            <blended xsi:type="xsd:string">?</blended>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </BlendedSearchRequest>
+      </soap:BlendedSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="BrowseNodeSearchRequest" bindingOperationName="BrowseNodeSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:BrowseNodeSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <BrowseNodeSearchRequest xsi:type="soap:BrowseNodeRequest">
+            <!--You may enter the following 8 items in any order-->
+            <browse_node xsi:type="xsd:string">?</browse_node>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </BrowseNodeSearchRequest>
+      </soap:BrowseNodeSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ClearShoppingCartRequest" bindingOperationName="ClearShoppingCartRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ClearShoppingCartRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ClearShoppingCartRequest xsi:type="soap:ClearShoppingCartRequest">
+            <!--You may enter the following 5 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ClearShoppingCartRequest>
+      </soap:ClearShoppingCartRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="DirectorSearchRequest" bindingOperationName="DirectorSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:DirectorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <DirectorSearchRequest xsi:type="soap:DirectorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <director xsi:type="xsd:string">?</director>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </DirectorSearchRequest>
+      </soap:DirectorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ExchangeSearchRequest" bindingOperationName="ExchangeSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ExchangeSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ExchangeSearchRequest xsi:type="soap:ExchangeRequest">
+            <!--You may enter the following 5 items in any order-->
+            <exchange_id xsi:type="xsd:string">?</exchange_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ExchangeSearchRequest>
+      </soap:ExchangeSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="GetShoppingCartRequest" bindingOperationName="GetShoppingCartRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:GetShoppingCartRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetShoppingCartRequest xsi:type="soap:GetShoppingCartRequest">
+            <!--You may enter the following 5 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </GetShoppingCartRequest>
+      </soap:GetShoppingCartRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="KeywordSearchRequest" bindingOperationName="KeywordSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:KeywordSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <KeywordSearchRequest xsi:type="soap:KeywordRequest">
+            <!--You may enter the following 9 items in any order-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </KeywordSearchRequest>
+      </soap:KeywordSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ListManiaSearchRequest" bindingOperationName="ListManiaSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ListManiaSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ListManiaSearchRequest xsi:type="soap:ListManiaRequest">
+            <!--You may enter the following 6 items in any order-->
+            <lm_id xsi:type="xsd:string">?</lm_id>
+            <page xsi:type="xsd:string">?</page>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ListManiaSearchRequest>
+      </soap:ListManiaSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ManufacturerSearchRequest" bindingOperationName="ManufacturerSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ManufacturerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ManufacturerSearchRequest xsi:type="soap:ManufacturerRequest">
+            <!--You may enter the following 9 items in any order-->
+            <manufacturer xsi:type="xsd:string">?</manufacturer>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ManufacturerSearchRequest>
+      </soap:ManufacturerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="MarketplaceSearchRequest" bindingOperationName="MarketplaceSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:MarketplaceSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <MarketplaceSearchRequest xsi:type="soap:MarketplaceRequest">
+            <!--You may enter the following 15 items in any order-->
+            <marketplace_search xsi:type="xsd:string">?</marketplace_search>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <!--Optional:-->
+            <keyword_search xsi:type="xsd:string">?</keyword_search>
+            <!--Optional:-->
+            <browse_id xsi:type="xsd:string">?</browse_id>
+            <!--Optional:-->
+            <zipcode xsi:type="xsd:string">?</zipcode>
+            <!--Optional:-->
+            <area_id xsi:type="xsd:string">?</area_id>
+            <!--Optional:-->
+            <geo xsi:type="xsd:string">?</geo>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <listing_id xsi:type="xsd:string">?</listing_id>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+            <!--Optional:-->
+            <index xsi:type="xsd:string">?</index>
+         </MarketplaceSearchRequest>
+      </soap:MarketplaceSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="ModifyShoppingCartItemsRequest" bindingOperationName="ModifyShoppingCartItemsRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ModifyShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ModifyShoppingCartItemsRequest xsi:type="soap:ModifyShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:ItemQuantityArray" soapenc:arrayType="soap:ItemQuantity[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ModifyShoppingCartItemsRequest>
+      </soap:ModifyShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="PowerSearchRequest" bindingOperationName="PowerSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:PowerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <PowerSearchRequest xsi:type="soap:PowerRequest">
+            <!--You may enter the following 9 items in any order-->
+            <power xsi:type="xsd:string">?</power>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </PowerSearchRequest>
+      </soap:PowerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="RemoveShoppingCartItemsRequest" bindingOperationName="RemoveShoppingCartItemsRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:RemoveShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <RemoveShoppingCartItemsRequest xsi:type="soap:RemoveShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:ItemIdArray" soapenc:arrayType="xsd:string[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </RemoveShoppingCartItemsRequest>
+      </soap:RemoveShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="SellerProfileSearchRequest" bindingOperationName="SellerProfileSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SellerProfileSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SellerProfileSearchRequest xsi:type="soap:SellerProfileRequest">
+            <!--You may enter the following 6 items in any order-->
+            <seller_id xsi:type="xsd:string">?</seller_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </SellerProfileSearchRequest>
+      </soap:SellerProfileSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="SellerSearchRequest" bindingOperationName="SellerSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SellerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SellerSearchRequest xsi:type="soap:SellerRequest">
+            <!--You may enter the following 10 items in any order-->
+            <seller_id xsi:type="xsd:string">?</seller_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <offerstatus xsi:type="xsd:string">?</offerstatus>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <seller_browse_id xsi:type="xsd:string">?</seller_browse_id>
+            <!--Optional:-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+            <!--Optional:-->
+            <index xsi:type="xsd:string">?</index>
+         </SellerSearchRequest>
+      </soap:SellerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="SimilaritySearchRequest" bindingOperationName="SimilaritySearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SimilaritySearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SimilaritySearchRequest xsi:type="soap:SimilarityRequest">
+            <!--You may enter the following 5 items in any order-->
+            <asin xsi:type="xsd:string">?</asin>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </SimilaritySearchRequest>
+      </soap:SimilaritySearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="UpcSearchRequest" bindingOperationName="UpcSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:UpcSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <UpcSearchRequest xsi:type="soap:UpcRequest">
+            <!--You may enter the following 8 items in any order-->
+            <upc xsi:type="xsd:string">?</upc>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </UpcSearchRequest>
+      </soap:UpcSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation><con:operation isOneWay="false" action="http://soap.amazon.com" name="WishlistSearchRequest" bindingOperationName="WishlistSearchRequest" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:WishlistSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <WishlistSearchRequest xsi:type="soap:WishlistRequest">
+            <!--You may enter the following 6 items in any order-->
+            <wishlist_id xsi:type="xsd:string">?</wishlist_id>
+            <page xsi:type="xsd:string">?</page>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </WishlistSearchRequest>
+      </soap:WishlistSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.amazon.com"/></con:call></con:operation></con:interface><con:testSuite name="AmazonSearchBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ActorSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ActorSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ActorSearchRequest</con:operation><con:request name="ActorSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ActorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ActorSearchRequest xsi:type="soap:ActorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <actor xsi:type="xsd:string">?</actor>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ActorSearchRequest>
+      </soap:ActorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddShoppingCartItemsRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="AddShoppingCartItemsRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>AddShoppingCartItemsRequest</con:operation><con:request name="AddShoppingCartItemsRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AddShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AddShoppingCartItemsRequest xsi:type="soap:AddShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <CartId xsi:type="xsd:string">?</CartId>
+            <!--Optional:-->
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:AddItemArray" soapenc:arrayType="soap:AddItem[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AddShoppingCartItemsRequest>
+      </soap:AddShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ArtistSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ArtistSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ArtistSearchRequest</con:operation><con:request name="ArtistSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ArtistSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ArtistSearchRequest xsi:type="soap:ArtistRequest">
+            <!--You may enter the following 9 items in any order-->
+            <artist xsi:type="xsd:string">?</artist>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ArtistSearchRequest>
+      </soap:ArtistSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AsinSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="AsinSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>AsinSearchRequest</con:operation><con:request name="AsinSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AsinSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AsinSearchRequest xsi:type="soap:AsinRequest">
+            <!--You may enter the following 7 items in any order-->
+            <asin xsi:type="xsd:string">?</asin>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <offer xsi:type="xsd:string">?</offer>
+            <!--Optional:-->
+            <offerpage xsi:type="xsd:string">?</offerpage>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AsinSearchRequest>
+      </soap:AsinSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AuthorSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="AuthorSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>AuthorSearchRequest</con:operation><con:request name="AuthorSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:AuthorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <AuthorSearchRequest xsi:type="soap:AuthorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <author xsi:type="xsd:string">?</author>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </AuthorSearchRequest>
+      </soap:AuthorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BlendedSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="BlendedSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>BlendedSearchRequest</con:operation><con:request name="BlendedSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:BlendedSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <BlendedSearchRequest xsi:type="soap:BlendedRequest">
+            <!--You may enter the following 5 items in any order-->
+            <blended xsi:type="xsd:string">?</blended>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </BlendedSearchRequest>
+      </soap:BlendedSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BrowseNodeSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="BrowseNodeSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>BrowseNodeSearchRequest</con:operation><con:request name="BrowseNodeSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:BrowseNodeSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <BrowseNodeSearchRequest xsi:type="soap:BrowseNodeRequest">
+            <!--You may enter the following 8 items in any order-->
+            <browse_node xsi:type="xsd:string">?</browse_node>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </BrowseNodeSearchRequest>
+      </soap:BrowseNodeSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ClearShoppingCartRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ClearShoppingCartRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ClearShoppingCartRequest</con:operation><con:request name="ClearShoppingCartRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ClearShoppingCartRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ClearShoppingCartRequest xsi:type="soap:ClearShoppingCartRequest">
+            <!--You may enter the following 5 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ClearShoppingCartRequest>
+      </soap:ClearShoppingCartRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DirectorSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DirectorSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>DirectorSearchRequest</con:operation><con:request name="DirectorSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:DirectorSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <DirectorSearchRequest xsi:type="soap:DirectorRequest">
+            <!--You may enter the following 9 items in any order-->
+            <director xsi:type="xsd:string">?</director>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </DirectorSearchRequest>
+      </soap:DirectorSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ExchangeSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ExchangeSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ExchangeSearchRequest</con:operation><con:request name="ExchangeSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ExchangeSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ExchangeSearchRequest xsi:type="soap:ExchangeRequest">
+            <!--You may enter the following 5 items in any order-->
+            <exchange_id xsi:type="xsd:string">?</exchange_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ExchangeSearchRequest>
+      </soap:ExchangeSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetShoppingCartRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetShoppingCartRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>GetShoppingCartRequest</con:operation><con:request name="GetShoppingCartRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:GetShoppingCartRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <GetShoppingCartRequest xsi:type="soap:GetShoppingCartRequest">
+            <!--You may enter the following 5 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </GetShoppingCartRequest>
+      </soap:GetShoppingCartRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="KeywordSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="KeywordSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>KeywordSearchRequest</con:operation><con:request name="KeywordSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:KeywordSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <KeywordSearchRequest xsi:type="soap:KeywordRequest">
+            <!--You may enter the following 9 items in any order-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </KeywordSearchRequest>
+      </soap:KeywordSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListManiaSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ListManiaSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ListManiaSearchRequest</con:operation><con:request name="ListManiaSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ListManiaSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ListManiaSearchRequest xsi:type="soap:ListManiaRequest">
+            <!--You may enter the following 6 items in any order-->
+            <lm_id xsi:type="xsd:string">?</lm_id>
+            <page xsi:type="xsd:string">?</page>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ListManiaSearchRequest>
+      </soap:ListManiaSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ManufacturerSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ManufacturerSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ManufacturerSearchRequest</con:operation><con:request name="ManufacturerSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ManufacturerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ManufacturerSearchRequest xsi:type="soap:ManufacturerRequest">
+            <!--You may enter the following 9 items in any order-->
+            <manufacturer xsi:type="xsd:string">?</manufacturer>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ManufacturerSearchRequest>
+      </soap:ManufacturerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="MarketplaceSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="MarketplaceSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>MarketplaceSearchRequest</con:operation><con:request name="MarketplaceSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:MarketplaceSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <MarketplaceSearchRequest xsi:type="soap:MarketplaceRequest">
+            <!--You may enter the following 15 items in any order-->
+            <marketplace_search xsi:type="xsd:string">?</marketplace_search>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <!--Optional:-->
+            <keyword_search xsi:type="xsd:string">?</keyword_search>
+            <!--Optional:-->
+            <browse_id xsi:type="xsd:string">?</browse_id>
+            <!--Optional:-->
+            <zipcode xsi:type="xsd:string">?</zipcode>
+            <!--Optional:-->
+            <area_id xsi:type="xsd:string">?</area_id>
+            <!--Optional:-->
+            <geo xsi:type="xsd:string">?</geo>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <listing_id xsi:type="xsd:string">?</listing_id>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+            <!--Optional:-->
+            <index xsi:type="xsd:string">?</index>
+         </MarketplaceSearchRequest>
+      </soap:MarketplaceSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ModifyShoppingCartItemsRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ModifyShoppingCartItemsRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>ModifyShoppingCartItemsRequest</con:operation><con:request name="ModifyShoppingCartItemsRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:ModifyShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ModifyShoppingCartItemsRequest xsi:type="soap:ModifyShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:ItemQuantityArray" soapenc:arrayType="soap:ItemQuantity[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </ModifyShoppingCartItemsRequest>
+      </soap:ModifyShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PowerSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="PowerSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>PowerSearchRequest</con:operation><con:request name="PowerSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:PowerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <PowerSearchRequest xsi:type="soap:PowerRequest">
+            <!--You may enter the following 9 items in any order-->
+            <power xsi:type="xsd:string">?</power>
+            <page xsi:type="xsd:string">?</page>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </PowerSearchRequest>
+      </soap:PowerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RemoveShoppingCartItemsRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="RemoveShoppingCartItemsRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>RemoveShoppingCartItemsRequest</con:operation><con:request name="RemoveShoppingCartItemsRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:RemoveShoppingCartItemsRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <RemoveShoppingCartItemsRequest xsi:type="soap:RemoveShoppingCartItemsRequest">
+            <!--You may enter the following 6 items in any order-->
+            <tag xsi:type="xsd:string">?</tag>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <CartId xsi:type="xsd:string">?</CartId>
+            <HMAC xsi:type="xsd:string">?</HMAC>
+            <Items xsi:type="soap:ItemIdArray" soapenc:arrayType="xsd:string[]"/>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </RemoveShoppingCartItemsRequest>
+      </soap:RemoveShoppingCartItemsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SellerProfileSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="SellerProfileSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>SellerProfileSearchRequest</con:operation><con:request name="SellerProfileSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SellerProfileSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SellerProfileSearchRequest xsi:type="soap:SellerProfileRequest">
+            <!--You may enter the following 6 items in any order-->
+            <seller_id xsi:type="xsd:string">?</seller_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </SellerProfileSearchRequest>
+      </soap:SellerProfileSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SellerSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="SellerSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>SellerSearchRequest</con:operation><con:request name="SellerSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SellerSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SellerSearchRequest xsi:type="soap:SellerRequest">
+            <!--You may enter the following 10 items in any order-->
+            <seller_id xsi:type="xsd:string">?</seller_id>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <offerstatus xsi:type="xsd:string">?</offerstatus>
+            <page xsi:type="xsd:string">?</page>
+            <!--Optional:-->
+            <seller_browse_id xsi:type="xsd:string">?</seller_browse_id>
+            <!--Optional:-->
+            <keyword xsi:type="xsd:string">?</keyword>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+            <!--Optional:-->
+            <index xsi:type="xsd:string">?</index>
+         </SellerSearchRequest>
+      </soap:SellerSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SimilaritySearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="SimilaritySearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>SimilaritySearchRequest</con:operation><con:request name="SimilaritySearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:SimilaritySearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <SimilaritySearchRequest xsi:type="soap:SimilarityRequest">
+            <!--You may enter the following 5 items in any order-->
+            <asin xsi:type="xsd:string">?</asin>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </SimilaritySearchRequest>
+      </soap:SimilaritySearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpcSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="UpcSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>UpcSearchRequest</con:operation><con:request name="UpcSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:UpcSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <UpcSearchRequest xsi:type="soap:UpcRequest">
+            <!--You may enter the following 8 items in any order-->
+            <upc xsi:type="xsd:string">?</upc>
+            <mode xsi:type="xsd:string">?</mode>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <sort xsi:type="xsd:string">?</sort>
+            <!--Optional:-->
+            <variations xsi:type="xsd:string">?</variations>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </UpcSearchRequest>
+      </soap:UpcSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="WishlistSearchRequest TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="WishlistSearchRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>AmazonSearchBinding</con:interface><con:operation>WishlistSearchRequest</con:operation><con:request name="WishlistSearchRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://soap.amazon.com/onca/soap2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.amazon.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:WishlistSearchRequest soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <WishlistSearchRequest xsi:type="soap:WishlistRequest">
+            <!--You may enter the following 6 items in any order-->
+            <wishlist_id xsi:type="xsd:string">?</wishlist_id>
+            <page xsi:type="xsd:string">?</page>
+            <tag xsi:type="xsd:string">?</tag>
+            <type xsi:type="xsd:string">?</type>
+            <devtag xsi:type="xsd:string">?</devtag>
+            <!--Optional:-->
+            <locale xsi:type="xsd:string">?</locale>
+         </WishlistSearchRequest>
+      </soap:WishlistSearchRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://soap.amazon.com"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
