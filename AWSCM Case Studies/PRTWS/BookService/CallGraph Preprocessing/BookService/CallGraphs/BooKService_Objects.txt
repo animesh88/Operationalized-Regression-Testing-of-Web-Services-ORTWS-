@@ -1,0 +1,15 @@
+BooKService.BGWS$BGVerse.<init> java.lang.Object.<init>
+BooKService.BGWS.<init> java.lang.Object.<init>
+BooKService.BGWS.bgWS BooKService.BGWS$BGVerse.<init>
+BooKService.BGWS.bgAllVerse BooKService.BGWS$BGVerse.<init>
+BooKService.BibleWS$BibleVerse.<init> java.lang.Object.<init>
+BooKService.BibleWS.<init> java.lang.Object.<init>
+BooKService.BibleWS.bibleWS BooKService.BibleWS$BibleVerse.<init>
+BooKService.BibleWS.bibleAllVerse BooKService.BibleWS$BibleVerse.<init>
+BooKService.BooKService.<init> java.lang.Object.<init>
+BooKService.BooKService.GetVerseByBooKAndChapterAndVerseNumber BooKService.BGWS.<init>
+BooKService.BooKService.GetVerseByBooKAndChapterAndVerseNumber BooKService.BibleWS.<init>
+BooKService.BooKService.GetAllVerseByBookAndChapterNumber BooKService.BGWS.<init>
+BooKService.BooKService.GetAllVerseByBookAndChapterNumber BooKService.BibleWS.<init>
+BooKService.BooKService.GetAbstractOfChapter BooKService.BGWS.<init>
+BooKService.BooKService.GetAbstractOfChapter BooKService.BibleWS.<init>

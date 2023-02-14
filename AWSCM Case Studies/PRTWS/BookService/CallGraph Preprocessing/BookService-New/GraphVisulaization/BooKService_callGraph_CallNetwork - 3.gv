@@ -1,0 +1,20 @@
+digraph G{
+1 [color=lightblue; style=filled]; 
+20 [color=lightblue; style=filled]; 
+21 [color=lightblue; style=filled];
+22 [color=lightblue; style=filled];
+41 [color=lightblue; style=filled];
+42 [color=lightblue; style=filled];
+43 [color=lightblue; style=filled];
+44 [color=lightblue; style=filled];
+45 [color=lightblue; style=filled];
+
+20 -> 21;
+41 -> 42;
+43 -> 1;
+43 -> 22;
+44 -> 21;
+44 -> 42;
+45 -> 20;
+45 -> 41;
+}
