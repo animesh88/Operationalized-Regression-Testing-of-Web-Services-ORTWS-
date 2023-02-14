@@ -2,7 +2,7 @@
 <b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
 <b> Parameterized Regression Testing of Web Services (PRTWS) </b>
 
-Use NetBeans to import and use the project.
+Use NetBeans and required libraries to import and use the project.
 
 Please cite or refer following research papers that used the JMeterRTWS in the experimentation section.
 
