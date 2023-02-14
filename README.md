@@ -6,6 +6,18 @@ Use NetBeans and required libraries to import and use the project.
 
 Please cite or refer following research papers that used the JMeterRTWS in the experimentation section.
 
+For more detail follow https://sites.google.com/site/animeshchaturvedi07/research/awscm
+<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA
+<b> PRTWS </b> https://youtu.be/qkXe3YEi264
+
+Basics of
+Cloud Service Life Cycle https://youtu.be/0BTYNOVJOBY
+Cloud Deployment Scenarios https://youtu.be/KqZ64ylCnVc
+Cloud Service Development Testing https://youtu.be/c_jBuw_4KMM
+Web Service Slicing https://youtu.be/1IFZSvvVwQw
+Service Evolution Analytics https://youtu.be/krpsiMKp40g
+QoS and SLA https://youtu.be/UfD2DLIeHxg
+
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
 J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641
 
