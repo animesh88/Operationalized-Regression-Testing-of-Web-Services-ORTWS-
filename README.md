@@ -10,16 +10,16 @@ For more detail follow https://sites.google.com/site/animeshchaturvedi07/researc
 <b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
 <b> PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
 
-Basics of
-Cloud Service Life Cycle https://youtu.be/0BTYNOVJOBY <br>
-Cloud Deployment Scenarios https://youtu.be/KqZ64ylCnVc <br>
-Cloud Service Development Testing https://youtu.be/c_jBuw_4KMM <br>
-Web Service Slicing https://youtu.be/1IFZSvvVwQw <br>
-Service Evolution Analytics https://youtu.be/krpsiMKp40g <br>
-QoS and SLA https://youtu.be/UfD2DLIeHxg <br>
+Basics of <br>
+<b> Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
+<b> Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
+<b> Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
+<b> Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
+<b> Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
+<b> QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
 
-Subset WSDL https://www.youtube.com/watch?v=b38DVc7oMes
-AWSCM https://www.youtube.com/watch?v=Zg1f3x0OH5k
+<b> Subset WSDL </b> https://www.youtube.com/watch?v=b38DVc7oMes <br>
+<b> AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
 J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g
