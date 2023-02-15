@@ -22,7 +22,7 @@ Basics of <br>
 <b> AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
-J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g
+J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g https://github.com/animesh88/ServiceEvolutionAnalytics
  
 # Web Service Slicing: Intra and Inter-Operational Analysis to Test Changes
 J1. Animesh Chaturvedi, and David Binkley. “Web Service Slicing: Intra and Inter-Operational Analysis to Test Changes”. IEEE Transactions on Services Computing (2018). IEEE Computer Society. DOI: 10.1109/TSC.2018.2821157 https://youtu.be/1IFZSvvVwQw
@@ -39,6 +39,7 @@ C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Eff
 C1. Animesh Chaturvedi, “Reducing cost in Regression testing of Web services”, 6th CSI International Conference on Software Engineering, IEEE, Sept 2012. DOI: 10.1109/CONSEG.2012.6349498.
 
 There are few more projects, which are aligned to this project.
+https://github.com/animesh88/ServiceEvolutionAnalytics
 https://github.com/animesh88/JMeterRTWS
 https://github.com/animesh88/SaaS
 https://github.com/animesh88/BookService
