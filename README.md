@@ -4,7 +4,7 @@
 
 Re-deployment of project needs knoweldge of Java, NetBeans, Web-Services, and Libraries (imports). <br>
 
-Basics of - <br>
+Basics videos from my lectures on Cloud Computing course - <br>
 <b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
 <b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
 <b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
