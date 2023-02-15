@@ -1,26 +1,37 @@
 # Web Service Slicing 
 <b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
-<b> Parameterized Regression Testing of Web Services (PRTWS) </b>
-Use NetBeans and required libraries to import and use the project.
+<b> Parameterized Regression Testing of Web Services (PRTWS) </b> <br>
+
+Pre-requisite knoweldge of NetBeans, Web-Services, and Libraries (imports) to re-deploy the project. <br>
+
+There are few more projects, which are aligned to this project. <br>
+https://github.com/animesh88/ServiceEvolutionAnalytics <br>
+https://github.com/animesh88/JMeterRTWS <br>
+https://github.com/animesh88/SaaS <br>
+https://github.com/animesh88/BookService <br>
+These projects are accumulated during 2011-2020.
+
+Basics of - <br>
+<b> Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
+<b> Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
+<b> Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
+
+Project related video presentations are as follows.
+<b> AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k
+<b> Subset WSDL </b> https://www.youtube.com/watch?v=b38DVc7oMes <br>
+<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
+<b> PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
+<b> Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
+<b> Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
+
+Applications of this project could be
+<b> QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
+
+For more details read research papers follow the project's web-page  https://sites.google.com/site/animeshchaturvedi07/research/awscm <br>
 
 Please cite or refer to the following research papers that used the 
 <b>  JMeterRTWS  </b> 
 in the experimentation section.
-
-For more detail follow https://sites.google.com/site/animeshchaturvedi07/research/awscm <br>
-<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
-<b> PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
-
-Basics of <br>
-<b> Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
-<b> Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
-<b> Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
-<b> Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
-<b> Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
-<b> QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
-
-<b> Subset WSDL </b> https://www.youtube.com/watch?v=b38DVc7oMes <br>
-<b> AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
 J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g https://github.com/animesh88/ServiceEvolutionAnalytics
@@ -39,9 +50,4 @@ C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Eff
 
 C1. Animesh Chaturvedi, “Reducing cost in Regression testing of Web services”, 6th CSI International Conference on Software Engineering, IEEE, Sept 2012. DOI: 10.1109/CONSEG.2012.6349498.
 
-There are few more projects, which are aligned to this project. <br>
-https://github.com/animesh88/ServiceEvolutionAnalytics <br>
-https://github.com/animesh88/JMeterRTWS <br>
-https://github.com/animesh88/SaaS <br>
-https://github.com/animesh88/BookService <br>
-These projects are accumulated during 2011-2020. If you need any help in this project, then please let me know at animesh.chaturvedi88@gmail.com
+If you need any help in this project, then please email me at animesh.chaturvedi88@gmail.com
