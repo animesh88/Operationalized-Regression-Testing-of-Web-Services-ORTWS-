@@ -13,7 +13,7 @@ Project related video presentations are as follows - <br>
 <b> - Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
 
 Please read, refer, and cite the following research papers that used the -
-<b>  Web Service Slicing (ORTWS and PRTWS) for Intra and Inter-Operational Analysis to Test Changes  - </b>.
+<b>  Web Service Slicing (ORTWS and PRTWS) for Intra and Inter-Operational Analysis to Test Changes </b>.
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
 J2 Animesh Chaturvedi, Aruna Tiwari, Shubhangi Chaturvedi, and Dave Binkley “Service Evolution Analytics: Change and Evolution Mining of a Distributed System”, IEEE Transactions on Engineering Management. DOI: 10.1109/TEM.2020.2987641 https://youtu.be/krpsiMKp40g https://github.com/animesh88/ServiceEvolutionAnalytics
