@@ -1,10 +1,11 @@
 # Web Service Slicing 
 <b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
 <b> Parameterized Regression Testing of Web Services (PRTWS) </b>
-
 Use NetBeans and required libraries to import and use the project.
 
-Please cite or refer following research papers that used the JMeterRTWS in the experimentation section.
+Please cite or refer to the following research papers that used the 
+<b>  JMeterRTWS  </b> 
+in the experimentation section.
 
 For more detail follow https://sites.google.com/site/animeshchaturvedi07/research/awscm <br>
 <b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
@@ -43,4 +44,4 @@ https://github.com/animesh88/ServiceEvolutionAnalytics <br>
 https://github.com/animesh88/JMeterRTWS <br>
 https://github.com/animesh88/SaaS <br>
 https://github.com/animesh88/BookService <br>
-These project works are accumulated during 2011-2020. If you need any help in this project, then please let me know at animesh.chaturvedi88@gmail.com
+These projects are accumulated during 2011-2020. If you need any help in this project, then please let me know at animesh.chaturvedi88@gmail.com
