@@ -2,12 +2,7 @@
 <b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
 <b> Parameterized Regression Testing of Web Services (PRTWS) </b> <br>
 
-Re-deployment of project needs knoweldge of Java, NetBeans, Web-Services, and Libraries (imports). <br>
-
-Basics videos from my lectures on Cloud Computing course - <br>
-<b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
-<b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
-<b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
+Re-deployment of the project needs knowledge of Java, NetBeans, Web-Services, and Libraries (imports). <br>
 
 Project related video presentations are as follows - <br>
 <b> - AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k  <br>
@@ -39,6 +34,11 @@ C3. Animesh Chaturvedi, “Automated Web Service Change Management AWSCM - A Too
 C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Efficient Regression Testing of Web Services”, 7th IEEE International Symposium on Maintenance and Evolution of Service oriented and Cloud Based Systems (IEEE MESOCA) Sept 2013, pp 50-55. IEEE Computer Society (co-located with 29th IEEE ICSM), Eindhoven, Netherlands 2013. DOI: 10.1109/MESOCA.2013.6632734.
 
 C1. Animesh Chaturvedi, “Reducing cost in Regression testing of Web services”, 6th CSI International Conference on Software Engineering, IEEE, Sept 2012. DOI: 10.1109/CONSEG.2012.6349498.
+
+Basics related videos from my lectures on Cloud Computing course https://www.youtube.com/watch?v=YWFy5Pwm_Uk&list=PLtvWi5o3JBnE7qyk4xkoYl9Be8vi8MOeJ - <br>
+<b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
+<b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
+<b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
 
 There are few more projects, which are aligned to this project. <br>
 https://github.com/animesh88/ServiceEvolutionAnalytics <br>
