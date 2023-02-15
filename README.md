@@ -12,9 +12,6 @@ Project related video presentations are as follows - <br>
 <b> - Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
 <b> - Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
 
-Applications of this project could be - <br>
-<b> - QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
-
 Please read, refer, and cite the following research papers that used the -
 <b>  Web Service Slicing (ORTWS and PRTWS) for Intra and Inter-Operational Analysis to Test Changes  - </b>.
 
@@ -39,6 +36,7 @@ Basics related videos from my lectures on Cloud Computing course https://www.you
 <b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
 <b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
 <b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
+Applications of this project could be <b> - QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
 
 There are few more projects, which are aligned to this project. <br>
 https://github.com/animesh88/ServiceEvolutionAnalytics <br>
