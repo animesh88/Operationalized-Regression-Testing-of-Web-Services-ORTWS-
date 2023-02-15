@@ -2,7 +2,7 @@
 <b> Operationalized Regression-Testing-of-Web-Services (ORTWS) </b> <br>
 <b> Parameterized Regression Testing of Web Services (PRTWS) </b> <br>
 
-Pre-requisite knoweldge of NetBeans, Web-Services, and Libraries (imports) to re-deploy the project. <br>
+Re-deployment of project needs knoweldge of Java, NetBeans, Web-Services, and Libraries (imports). <br>
 
 Basics of - <br>
 <b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
