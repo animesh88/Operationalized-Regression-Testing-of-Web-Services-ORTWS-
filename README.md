@@ -32,7 +32,7 @@ C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Eff
 
 C1. Animesh Chaturvedi, “Reducing cost in Regression testing of Web services”, 6th CSI International Conference on Software Engineering, IEEE, Sept 2012. DOI: 10.1109/CONSEG.2012.6349498.
 
-Basics related videos from my lectures on Cloud Computing course https://www.youtube.com/watch?v=YWFy5Pwm_Uk&list=PLtvWi5o3JBnE7qyk4xkoYl9Be8vi8MOeJ - <br>
+Videos related to the basic concepts related to the project, which are lectures on Cloud Computing course https://www.youtube.com/watch?v=YWFy5Pwm_Uk&list=PLtvWi5o3JBnE7qyk4xkoYl9Be8vi8MOeJ - <br>
 <b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
 <b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
 <b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
