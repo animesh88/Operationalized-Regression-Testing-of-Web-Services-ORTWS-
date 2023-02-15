@@ -38,4 +38,8 @@ C2. Animesh Chaturvedi & Atul Gupta, “A Tool Supported Approach to Perform Eff
 
 C1. Animesh Chaturvedi, “Reducing cost in Regression testing of Web services”, 6th CSI International Conference on Software Engineering, IEEE, Sept 2012. DOI: 10.1109/CONSEG.2012.6349498.
 
-If you need any help in this project, then please let me know at animesh.chaturvedi88@gmail.com
+There are few more projects, which are aligned to this project.
+https://github.com/animesh88/JMeterRTWS
+https://github.com/animesh88/SaaS
+https://github.com/animesh88/BookService
+These project works are accumulated during 2011-2020. If you need any help in this project, then please let me know at animesh.chaturvedi88@gmail.com
