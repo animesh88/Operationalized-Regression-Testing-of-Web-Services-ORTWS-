@@ -12,25 +12,25 @@ https://github.com/animesh88/BookService <br>
 These projects are accumulated during 2011-2020.
 
 Basics of - <br>
-<b> Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
-<b> Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
-<b> Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
+<b> - Cloud Service Life Cycle </b> https://youtu.be/0BTYNOVJOBY <br>
+<b> - Cloud Deployment Scenarios  </b> https://youtu.be/KqZ64ylCnVc <br>
+<b> - Cloud Service Development Testing </b> https://youtu.be/c_jBuw_4KMM <br>
 
-Project related video presentations are as follows.
-<b> AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k
-<b> Subset WSDL </b> https://www.youtube.com/watch?v=b38DVc7oMes <br>
-<b> ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
-<b> PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
-<b> Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
-<b> Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
+Project related video presentations are as follows - <br>
+<b> - AWSCM </b> https://www.youtube.com/watch?v=Zg1f3x0OH5k  <br>
+<b> - Subset WSDL </b> https://www.youtube.com/watch?v=b38DVc7oMes <br>
+<b> - ORTWS </b> https://youtu.be/Thz8RZ7PZrA <br>
+<b> - PRTWS </b> https://youtu.be/qkXe3YEi264 <br>
+<b> - Web Service Slicing </b> https://youtu.be/1IFZSvvVwQw <br>
+<b> - Service Evolution Analytics </b> https://youtu.be/krpsiMKp40g <br>
 
-Applications of this project could be
-<b> QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
+Applications of this project could be - <br>
+<b> - QoS and SLA </b> https://youtu.be/UfD2DLIeHxg <br>
 
 For more details read research papers follow the project's web-page  https://sites.google.com/site/animeshchaturvedi07/research/awscm <br>
 
-Please cite or refer to the following research papers that used the 
-<b>  JMeterRTWS  </b> 
+Please cite or refer to the following research papers that used the -
+<b>  Web Service Slicing (ORTWS and PRTWS) for Intra and Inter-Operational Analysis to Test Changes  - </b> 
 in the experimentation section.
 
 # Service Evolution Analytics: Change and Evolution Mining of a Distributed System
